@@ -29,7 +29,7 @@ const TestimonialsSection = () => {
                 CL
               </div>
               <div className="ml-3">
-                <h4 className="font-semibold text-skinai-darkText">Carmen Leiva</h4>
+                <h4 className="font-semibold text-skinai-darkText">Carmen Gloria</h4>
                 <p className="text-xs text-skinai-lightText">Santiago, Chile</p>
               </div>
             </div>
@@ -51,7 +51,7 @@ const TestimonialsSection = () => {
                 JM
               </div>
               <div className="ml-3">
-                <h4 className="font-semibold text-skinai-darkText">Juan Mardones</h4>
+                <h4 className="font-semibold text-skinai-darkText">Juan Russu</h4>
                 <p className="text-xs text-skinai-lightText">Concepción, Chile</p>
               </div>
             </div>
@@ -80,26 +80,7 @@ const TestimonialsSection = () => {
           </div>
         </div>
 
-        {/* Partners Section */}
-        <div className="mt-20">
-          <h3 className="text-center text-xl font-semibold text-skinai-darkText mb-8">
-            Respaldado por Instituciones Líderes en Salud
-          </h3>
-          <div className="flex flex-wrap justify-center gap-12 items-center opacity-70">
-            <div className="text-center">
-              <div className="font-heading text-2xl font-bold text-skinai-darkText">Hospital Clínico</div>
-              <div className="text-sm text-skinai-lightText">Universidad de Chile</div>
-            </div>
-            <div className="text-center">
-              <div className="font-heading text-2xl font-bold text-skinai-darkText">Sociedad Chilena</div>
-              <div className="text-sm text-skinai-lightText">de Dermatología</div>
-            </div>
-            <div className="text-center">
-              <div className="font-heading text-2xl font-bold text-skinai-darkText">Centro de IA</div>
-              <div className="text-sm text-skinai-lightText">Universidad Católica</div>
-            </div>
-          </div>
-        </div>
+
       </div>
     </section>
   );
