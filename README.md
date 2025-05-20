@@ -17,8 +17,20 @@ cd SkinIAWebPage
 npm i
 
 # Paso 4: Para development, inicia localmente el proyecto.
-npm run dev
+npm run dev 
 ```
+##Build
+
+```sh
+# Paso 1: build del poryecto.
+npm run build
+
+# Paso 2: despliegue del proyecto con GitHub Page.
+npm run deploy
+
+# Paso 3: Eliminar dependencias anteriores.
+rm -rf dist
+
 
 ##Tecnologías 
 

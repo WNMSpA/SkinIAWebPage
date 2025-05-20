@@ -30,11 +30,14 @@ const Navbar = () => {
   };
 
   return (
-    <header className="w-full py-4 px-4 sm:px-6 lg:px-8">
+    <header
+      className="fixed top-0 left-0 w-full z-50 backdrop-blur-md shadow-md py-4 px-4 sm:px-6 lg:px-8"
+      style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}
+    >
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
           <img
-            src="/lovable-uploads/f383ae74-d18b-4d9a-8055-f4fb754459c9.png"
+            src="Logo-SkinAi-sinFondo.png"
             alt="Skin.AI Logo"
             className="h-12 w-auto"
           />
@@ -42,17 +45,30 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-8">
-          <a href="#features" className="text-skinai-darkText font-medium hover:text-skinai-coral transition-colors">
+          <a
+            href="#features"
+            className="group relative font-medium transition-colors"
+            style={{ color: "var(--skinai-dark)" }}
+          >
             Características
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-gradient-to-r from-[#bb9c87] to-[#d5ad95] transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#how-it-works" className="text-skinai-darkText font-medium hover:text-skinai-coral transition-colors">
+          <a
+            href="#how-it-works"
+            className="group relative text-skinai-darkText font-medium transition-colors"
+            style={{ color: "var(--skinai-dark)" }}
+          >
             Cómo Funciona
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-gradient-to-r from-[#bb9c87] to-[#d5ad95] transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#benefits" className="text-skinai-darkText font-medium hover:text-skinai-coral transition-colors">
+
+          <a href="#benefits" className="group relative text-skinai-darkText font-medium transition-colors" style={{ color: "var(--skinai-dark)" }}>
             Beneficios
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-gradient-to-r from-[#bb9c87] to-[#d5ad95] transition-all duration-300 group-hover:w-full"></span>
           </a>
-          <a href="#testimonials" className="text-skinai-darkText font-medium hover:text-skinai-coral transition-colors">
+          <a href="#testimonials" className="group relative text-skinai-darkText font-medium transition-colors" style={{ color: "var(--skinai-dark)" }}>
             Testimonios
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-gradient-to-r from-[#bb9c87] to-[#d5ad95] transition-all duration-300 group-hover:w-full"></span>
           </a>
         </nav>
 
@@ -60,7 +76,7 @@ const Navbar = () => {
         <div className="hidden md:block">
           <Dialog>
             <DialogTrigger asChild>
-              <Button className="bg-skinai-coral hover:bg-opacity-90 text-white px-8 py-6 text-lg cta-button">
+              <Button className=" hover:bg-opacity-90 text-white px-8 py-6 text-lg cta-button" style={{ backgroundColor: "var(--skinai-rose)" }}>
                 Descargar App
               </Button>
             </DialogTrigger>
@@ -82,7 +98,7 @@ const Navbar = () => {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                   />
-                  <Button onClick={handleSubmit} className="w-full bg-skinai-coral text-white">
+                  <Button onClick={handleSubmit} className="w-full  text-white" style={{ backgroundColor: "var(--skinai-rose)" }}>
                     Notificarme
                   </Button>
                 </div>

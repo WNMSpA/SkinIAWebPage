@@ -7,7 +7,7 @@ const Footer = () => {
           {/* Company Info */}
           <div className="md:col-span-1">
             <img 
-              src="/lovable-uploads/f383ae74-d18b-4d9a-8055-f4fb754459c9.png" 
+              src="Logo-SkinAi-sinFondo.png" 
               alt="Skin.AI Logo" 
               className="h-10 w-auto mb-4" 
             />

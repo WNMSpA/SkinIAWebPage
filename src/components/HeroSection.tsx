@@ -27,7 +27,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="py-16 md:py-24 overflow-hidden relative">
+    <section className="py-32 md:py-52 overflow-hidden relative"  style={{ color: "var(--skinai-dark)" }}>
       <div className="absolute inset-0 bg-gradient-to-r from-skinai-blue/20 to-skinai-coral/20 -z-10" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -35,10 +35,10 @@ const HeroSection = () => {
 
           {/* Text Content */}
           <div className="md:col-span-7 animate-fade-in">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-skinai-darkText mb-4 leading-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight" style={{ color: "var(--skinai-rose)" , fontFamily: "var(--font-primary)" }}>
               Democratiza tu salud dermatológica con Skin.AI
             </h1>
-            <p className="text-lg md:text-xl text-skinai-lightText mb-8 max-w-2xl">
+            <p className="text-lg md:text-xl text-skinai-lightText mb-8 max-w-2xl" style={{ color: "var(--skinai-darkText)" , fontFamily: "var(--font-secondary)" }}>
               Una aplicación inteligente que te permite evaluar tu piel, entender tus productos dermocosméticos y acceder a soluciones personalizadas, todo desde tu celular.
             </p>
 
