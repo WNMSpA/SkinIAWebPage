@@ -123,9 +123,9 @@ export default {
                 'scale-in': 'scale-in 0.3s ease-out',
 			},
             fontFamily: {
-                sans: ['Poppins', 'sans-serif'],
-                heading: ['Montserrat', 'sans-serif']
-            }
+				sans: ['system-ui', 'sans-serif'],
+				heading: ['system-ui', 'sans-serif'],
+			}
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
