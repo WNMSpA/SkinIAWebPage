@@ -2,7 +2,7 @@
   "name": "vite_react_shadcn_ts",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://wnmspa.github.io/SkinIAWebPage",
+  "homepage": "https://skinia.cl",
   "type": "module",
   "scripts": {
     "dev": "vite",

@@ -5,7 +5,7 @@ import { componentTagger } from "lovable-tagger";
 
 // 👇 Usa esta forma para que `base` no dependa del `mode`
 export default defineConfig({
-  base: "/SkinIAWebPage/", // ✅ Ruta del subdirectorio en GitHub Pages
+  base: "/",
   server: {
     host: "::",
     port: 8080,
