@@ -110,7 +110,7 @@ const HeroSection = () => {
             <div className="relative">
               <div className="app-screenshot mx-auto max-w-xs">
                 <img
-                  src="/lovable-uploads/abf680e6-c094-47ac-9d4e-082ed6b862ba.png"
+                  src="image1.jpg"
                   alt="Skin.AI App Demo - Senior using skin scanning feature"
                   className="w-full h-auto"
                 />
