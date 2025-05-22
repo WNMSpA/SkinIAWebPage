@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap');
-@import url('https://fonts.cdnfonts.com/css/scream-outline'); /* Tipografía decorativa */
 @import url('https://fonts.googleapis.com/css2?family=Garet&display=swap'); /* Complementaria SkinAI */
 
 @tailwind base;
@@ -9,7 +8,7 @@
 @layer base {
   :root {
     --font-primary: 'Garet', sans-serif;
-    --font-decorative: 'Scream Outline', sans-serif;
+    --font-secondary: 'Montserrat', sans-serif;
 
     --skinai-dark: #7c6253;
     --skinai-rose: #bb9c87;
@@ -91,8 +90,8 @@
     font-family: var(--font-primary);
   }
 
-  h1, h2, h3, h4, h5, h6, .decorative {
-    font-family: var(--font-decorative);
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
     background: var(--gradient-skinai-horizontal);
     -webkit-background-clip: text;
     color: transparent;
