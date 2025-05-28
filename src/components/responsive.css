@@ -1,0 +1,47 @@
+/* Estilos por defecto (mobile-first) */
+.navbar-links {
+    display: none;
+}
+
+.navbar-logo-full {
+    display: none;
+}
+
+.navbar-logo-icon {
+    display: block;
+}
+
+.navbar-download {
+    display: none;
+}
+
+.navbar-sidebar {
+    display: block;
+}
+
+/* Estilos para escritorio */
+@media (min-width: 1095px) {
+    .navbar-links {
+        display: flex;
+        gap: 2rem;
+    }
+
+    .navbar-logo-full {
+        display: block;
+    }
+
+    .navbar-logo-icon {
+        display: none;
+    }
+
+    .navbar-download {
+        display: block;
+    }
+
+    .navbar-menu-button {
+        display: none;
+    }
+    .navbar-sidebar {
+        display: none;
+    }
+}

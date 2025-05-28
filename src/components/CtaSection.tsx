@@ -1,7 +1,30 @@
-
+import { useState } from "react";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 
 const CtaSection = () => {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = () => {
+    if (!email || !email.includes("@")) {
+      alert("Por favor ingresa un correo válido.");
+      return;
+    }
+
+    console.log("Correo registrado:", email);
+    setSubmitted(true);
+    setEmail("");
+  };
   return (
     <section className="py-32 md:py-52">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -15,9 +38,41 @@ const CtaSection = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button className="bg-skinai-coral hover:bg-opacity-90 text-white px-8 py-6 text-lg cta-button">
-                Descargar App
-              </Button>
+                            <Dialog>
+                <DialogTrigger asChild>
+                  <Button className=" hover:bg-opacity-90 text-white px-8 py-6 text-lg cta-button" style={{ backgroundColor: "var(--skinai-rose)" }}>
+                    Descargar App
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>🚧 Disponible próximamente</DialogTitle>
+                    <DialogDescription>
+                      Ingresa tu correo y te avisaremos cuando la aplicación esté lista.
+                    </DialogDescription>
+                  </DialogHeader>
+
+                  {!submitted ? (
+                    <div className="space-y-4 mt-4">
+                      <Label htmlFor="email">Correo electrónico</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="tucorreo@ejemplo.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
+                      <Button onClick={handleSubmit} className="w-full bg-skinai-coral text-white">
+                        Notificarme
+                      </Button>
+                    </div>
+                  ) : (
+                    <p className="text-green-600 mt-4">
+                      ✅ ¡Gracias! Te notificaremos cuando esté disponible.
+                    </p>
+                  )}
+                </DialogContent>
+              </Dialog>
               <Button variant="outline" className="border-skinai-coral text-skinai-darkText hover:bg-skinai-coral/10 px-8 py-6 text-lg">
                 Conocer Planes Premium
               </Button>

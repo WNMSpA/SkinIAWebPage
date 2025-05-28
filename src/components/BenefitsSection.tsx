@@ -1,7 +1,30 @@
-
+import { useState } from "react";
+import {
+  Dialog,
+  DialogTrigger,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 
 const BenefitsSection = () => {
+  const [email, setEmail] = useState("");
+  const [submitted, setSubmitted] = useState(false);
+
+  const handleSubmit = () => {
+    if (!email || !email.includes("@")) {
+      alert("Por favor ingresa un correo válido.");
+      return;
+    }
+
+    console.log("Correo registrado:", email);
+    setSubmitted(true);
+    setEmail("");
+  };
   return (
     <section className="py-16 md:py-24" id="benefits">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,7 +36,7 @@ const BenefitsSection = () => {
                 Beneficios de Usar Skin.AI
               </h2>
               <p className="text-lg text-skinai-lightText">
-                Nuestra aplicación revoluciona la manera en que cuidas tu piel, 
+                Nuestra aplicación revoluciona la manera en que cuidas tu piel,
                 ofreciendo ventajas que combinan tecnología avanzada con experiencia dermatológica.
               </p>
             </div>
@@ -81,9 +104,41 @@ const BenefitsSection = () => {
             </div>
 
             <div className="mt-10">
-              <Button className="bg-skinai-coral hover:bg-opacity-90 text-white px-8 py-6 text-lg cta-button">
-                Descargar Ahora
-              </Button>
+              <Dialog>
+                <DialogTrigger asChild>
+                  <Button className=" hover:bg-opacity-90 text-white px-8 py-6 text-lg cta-button" style={{ backgroundColor: "var(--skinai-rose)" }}>
+                    Descargar App
+                  </Button>
+                </DialogTrigger>
+                <DialogContent className="max-w-md">
+                  <DialogHeader>
+                    <DialogTitle>🚧 Disponible próximamente</DialogTitle>
+                    <DialogDescription>
+                      Ingresa tu correo y te avisaremos cuando la aplicación esté lista.
+                    </DialogDescription>
+                  </DialogHeader>
+
+                  {!submitted ? (
+                    <div className="space-y-4 mt-4">
+                      <Label htmlFor="email">Correo electrónico</Label>
+                      <Input
+                        id="email"
+                        type="email"
+                        placeholder="tucorreo@ejemplo.com"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                      />
+                      <Button onClick={handleSubmit} className="w-full bg-skinai-coral text-white">
+                        Notificarme
+                      </Button>
+                    </div>
+                  ) : (
+                    <p className="text-green-600 mt-4">
+                      ✅ ¡Gracias! Te notificaremos cuando esté disponible.
+                    </p>
+                  )}
+                </DialogContent>
+              </Dialog>
             </div>
           </div>
 
@@ -100,7 +155,7 @@ const BenefitsSection = () => {
                   Enfoque en Pieles Latinas
                 </h3>
                 <p className="text-skinai-lightText">
-                  Nuestra IA está especialmente entrenada para reconocer condiciones en pieles latinas y chilenas, 
+                  Nuestra IA está especialmente entrenada para reconocer condiciones en pieles latinas y chilenas,
                   a diferencia de otras soluciones internacionales.
                 </p>
               </div>
@@ -111,7 +166,7 @@ const BenefitsSection = () => {
                   Solución Integral
                 </h3>
                 <p className="text-skinai-lightText">
-                  Combinamos detección, análisis de productos y acceso a tratamientos en una sola plataforma, 
+                  Combinamos detección, análisis de productos y acceso a tratamientos en una sola plataforma,
                   ofreciendo un enfoque holístico para el cuidado de tu piel.
                 </p>
               </div>
@@ -122,7 +177,7 @@ const BenefitsSection = () => {
                   Tecnología Avanzada
                 </h3>
                 <p className="text-skinai-lightText">
-                  Respaldados por dermatólogos profesionales y algoritmos de IA de última generación 
+                  Respaldados por dermatólogos profesionales y algoritmos de IA de última generación
                   que mejoran continuamente con cada escaneo.
                 </p>
               </div>
@@ -133,7 +188,7 @@ const BenefitsSection = () => {
                   Versión Premium
                 </h3>
                 <p className="text-skinai-lightText mb-2">
-                  Accede a análisis más detallados, seguimiento de condiciones, consultas con especialistas 
+                  Accede a análisis más detallados, seguimiento de condiciones, consultas con especialistas
                   vía telemedicina y más funcionalidades avanzadas.
                 </p>
                 <p className="text-skinai-coral font-medium">

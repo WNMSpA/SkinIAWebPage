@@ -36,7 +36,7 @@ const HeroSection = () => {
           {/* Text Content */}
           <div className="md:col-span-7 animate-fade-in">
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-4 leading-tight" style={{ color: "var(--skinai-rose)" , fontFamily: "var(--font-primary)" }}>
-              Democratiza tu salud dermatológica con Skin.AI
+              Democratiza tu salud dermatológica con SkinAI
             </h1>
             <p className="text-lg md:text-xl text-skinai-lightText mb-8 max-w-2xl" style={{ color: "var(--skinai-darkText)" , fontFamily: "var(--font-secondary)" }}>
               Una aplicación inteligente que te permite evaluar tu piel, entender tus productos dermocosméticos y acceder a soluciones personalizadas, todo desde tu celular.
@@ -46,7 +46,7 @@ const HeroSection = () => {
             <div className="flex flex-col sm:flex-row gap-4">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button className="bg-skinai-coral hover:bg-opacity-90 text-white px-8 py-6 text-lg cta-button">
+                  <Button className=" hover:bg-opacity-90 text-white px-8 py-6 text-lg cta-button" style={{ backgroundColor: "var(--skinai-rose)" }}>
                     Descargar App
                   </Button>
                 </DialogTrigger>
