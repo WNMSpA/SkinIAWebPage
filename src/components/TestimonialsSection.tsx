@@ -1,7 +1,5 @@
-
 const TestimonialsSection = () => {
-  return (
-    <section className="py-32 md:py-48 bg-skinai-lightBg" id="testimonials">
+  return <section className="py-32 md:py-48 bg-skinai-lightBg" id="testimonials">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-skinai-darkText mb-4">
@@ -51,7 +49,7 @@ const TestimonialsSection = () => {
                 JM
               </div>
               <div className="ml-3">
-                <h4 className="font-semibold text-skinai-darkText">Juan Russu</h4>
+                <h4 className="font-semibold text-skinai-darkText">Juan Arriagada</h4>
                 <p className="text-xs text-skinai-lightText">Concepción, Chile</p>
               </div>
             </div>
@@ -82,8 +80,6 @@ const TestimonialsSection = () => {
 
 
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TestimonialsSection;
